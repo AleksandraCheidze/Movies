@@ -1,7 +1,14 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Search from "./components/Search.jsx";
 
+const API_BASE_URL="https://api.themoviedb.org/3"
+
 const App = () => {
+    const [searchTerm, setSearchTerm] = useState('');
+
+    useEffect(() => {
+
+    }, []);
     return (
         <main>
           <div className="pattern" />
@@ -13,7 +20,8 @@ const App = () => {
                  </h1>
              </header>
 
-             <Search />
+             <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+             <h1 className="text-white">{searchTerm}</h1>
 
          </div>
         </main>
