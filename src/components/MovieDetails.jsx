@@ -1,6 +1,8 @@
+// MovieDetails.jsx
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './MovieDetails.css';
+import MovieCard from './MovieCard';  // Импортируем MovieCard
 
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -106,15 +108,15 @@ const MovieDetails = () => {
                 </div>
             )}
 
-            {/* Recommended Movies */}
+            {/* Recommended Movies as Movie Cards */}
             {movie.recommendations?.results?.length > 0 && (
                 <div className="movie-info movie-recommended-card">
                     <h2 className="section-title">Recommended Movies</h2>
-                    <ul>
-                        {movie.recommendations.results.slice(0, 5).map(rec => (
-                            <li key={rec.id}>{rec.title}</li>
+                    <div className="movie-card-container">
+                        {movie.recommendations.results.slice(0, 8).map(recMovie => (
+                            <MovieCard key={recMovie.id} movie={recMovie} />
                         ))}
-                    </ul>
+                    </div>
                 </div>
             )}
         </div>
