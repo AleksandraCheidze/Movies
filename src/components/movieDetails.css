@@ -1,27 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
+:root {
+    --primary-bg-color: #030014;
+    --secondary-bg-color: #1e1b30;
+    --highlight-color: #cecefb;
+    --button-bg-color: #2a2748;
+    --border-radius: 8px;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+}
+
 @layer base {
     body {
         font-family: 'DM Sans', sans-serif;
-        background-color: #030014;
-        color: #cecefb;
+        background-color: var(--primary-bg-color);
+        color: var(--highlight-color);
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
-    /* Main container for movie details */
     .movie-details {
         max-width: 1200px;
         margin: 20px auto;
         padding: 20px;
-        background-color: #1e1b30;
+        background-color: var(--secondary-bg-color);
         border-radius: 15px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
     }
 
-    /* Title of the movie */
     .movie-title {
         font-size: 2rem;
         font-weight: bold;
@@ -29,44 +36,39 @@
         margin-bottom: 20px;
     }
 
-    /* Movie poster */
     .movie-poster {
         display: block;
         margin: 20px auto;
         width: 100%;
-        max-width: 300px;
-        border-radius: 8px;
+        max-width: 400px;
+        border-radius: var(--border-radius);
     }
 
-    /* General style for all info sections */
     .movie-info {
         padding: 20px;
         margin-bottom: 20px;
-        background-color: #2a2748;
-        border-radius: 8px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+        background-color: var(--button-bg-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
     }
 
-    /* Movie overview text */
     .movie-overview {
         font-size: 1.2rem;
         color: #a8b5db;
         margin-bottom: 15px;
     }
 
-    /* Section title */
     h2.section-title {
         font-size: 1.5rem;
-        color: #cecefb;
-        margin-bottom: 15px; /* Ensure space between title and content */
+        color: var(--highlight-color);
+        margin-bottom: 15px;
     }
 
-    /* Cast section card */
     .movie-cast-card {
         padding: 20px;
-        background-color: #2a2748;
-        border-radius: 8px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+        background-color: var(--button-bg-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
         margin-bottom: 15px;
     }
 
@@ -76,7 +78,7 @@
     }
 
     .movie-cast-card ul li {
-        color: #cecefb;
+        color: var(--highlight-color);
         font-size: 1rem;
         margin-bottom: 10px;
     }
@@ -85,18 +87,17 @@
         font-weight: bold;
     }
 
-    /* Reviews section */
     .review-card {
-        background-color: #2a2748;
-        border-radius: 8px;
+        background-color: var(--button-bg-color);
+        border-radius: var(--border-radius);
         padding: 15px;
         margin-bottom: 15px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+        box-shadow: var(--box-shadow);
     }
 
     .review-author {
         font-weight: bold;
-        color: #cecefb;
+        color: var(--highlight-color);
     }
 
     .review-content {
@@ -104,29 +105,98 @@
         margin-top: 10px;
     }
 
-    /* Trailer section */
     .movie-trailer-card {
-        margin-bottom: 30px; /* Ensure there is a bottom margin for spacing */
+        margin-bottom: 30px;
     }
 
-    /* Recommended movies section */
     .movie-recommended-card {
-        margin-bottom: 30px; /* Ensure there is a bottom margin for spacing */
+        margin-bottom: 30px;
     }
 
-    /* List of recommended movies */
     .movie-recommended-card ul {
         list-style-type: none;
         padding: 0;
     }
 
     .movie-recommended-card li {
-        color: #cecefb;
+        color: var(--highlight-color);
         font-size: 1rem;
         margin-bottom: 10px;
     }
 
-    /* Mobile responsiveness */
+    .movie-card-container {
+        display: flex;
+        flex-wrap: wrap;  /* Элементы переносятся на новую строку, если не помещаются */
+        justify-content: center;  /* Центрируем карточки по горизонтали */
+        gap: 20px;        /* Отступы между карточками */
+        align-items: center; /* Центрируем карточки по вертикали */
+    }
+
+    /* Рекомендованные карточки */
+    .movie-recommended-card {
+        flex: 1 1 250px;          /* Карточки гибкие, но минимум 250px по ширине */
+        margin: 15px;
+        padding: 10px;
+        background-color: var(--secondary-bg-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        display: flex;
+        flex-direction: column;
+        align-items: center;      /* Центрируем контент внутри карточки по горизонтали */
+        text-align: center;
+    }
+
+    .movie-recommended-card img {
+        width: 100%;              /* Изображение занимает 100% ширины карточки */
+        height: auto;             /* Высота автоматически подстраивается под пропорции */
+        max-width: 200px;         /* Ограничиваем максимальную ширину изображения */
+        max-height: 300px;        /* Ограничиваем максимальную высоту изображения */
+        border-radius: var(--border-radius);
+        margin-bottom: 10px;
+    }
+
+    .movie-recommended-card h3 {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .movie-recommended-card .rating {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .movie-recommended-card .rating img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .movie-recommended-card .rating p {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .movie-recommended-card .content {
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        font-size: 0.8rem;
+        color: #a8b5db;
+    }
+
+    .movie-recommended-card .content span {
+        font-size: 1rem;
+        color: var(--highlight-color);
+    }
+
+    .movie-recommended-card .content p {
+        margin: 0;
+    }
+
+    /* Адаптивность для мобильных */
     @media (max-width: 768px) {
         .movie-title {
             font-size: 1.8rem;
@@ -144,8 +214,29 @@
             padding: 10px;
         }
 
-        .movie-trailer-card, .movie-recommended-card {
-            margin-bottom: 20px; /* Adjust bottom margin for mobile */
+        .movie-trailer-card,
+        .movie-recommended-card {
+            margin-bottom: 20px;
+        }
+
+        .movie-recommended-card {
+            max-width: 180px; /* Уменьшаем размер карточки для мобильных устройств */
+        }
+
+        .movie-recommended-card h3 {
+            font-size: 0.9rem;
+        }
+
+        .movie-recommended-card .rating img {
+            width: 14px;
+        }
+
+        .movie-recommended-card .rating p {
+            font-size: 0.8rem;
+        }
+
+        .movie-recommended-card .content {
+            font-size: 0.7rem;
         }
     }
 }
