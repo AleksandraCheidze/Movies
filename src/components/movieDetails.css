@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@layer base {
+    body {
+        font-family: 'DM Sans', sans-serif;
+        background-color: #030014;
+        color: #cecefb;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Main container for movie details */
+    .movie-details {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #1e1b30;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Title of the movie */
+    .movie-title {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Movie poster */
+    .movie-poster {
+        display: block;
+        margin: 20px auto;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 8px;
+    }
+
+    /* General style for all info sections */
+    .movie-info {
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #2a2748;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Movie overview text */
+    .movie-overview {
+        font-size: 1.2rem;
+        color: #a8b5db;
+        margin-bottom: 15px;
+    }
+
+    /* Section title */
+    h2.section-title {
+        font-size: 1.5rem;
+        color: #cecefb;
+        margin-bottom: 15px; /* Ensure space between title and content */
+    }
+
+    /* Cast section card */
+    .movie-cast-card {
+        padding: 20px;
+        background-color: #2a2748;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+        margin-bottom: 15px;
+    }
+
+    .movie-cast-card ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .movie-cast-card ul li {
+        color: #cecefb;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .movie-cast-card ul li strong {
+        font-weight: bold;
+    }
+
+    /* Reviews section */
+    .review-card {
+        background-color: #2a2748;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    }
+
+    .review-author {
+        font-weight: bold;
+        color: #cecefb;
+    }
+
+    .review-content {
+        color: #a8b5db;
+        margin-top: 10px;
+    }
+
+    /* Trailer section */
+    .movie-trailer-card {
+        margin-bottom: 30px; /* Ensure there is a bottom margin for spacing */
+    }
+
+    /* Recommended movies section */
+    .movie-recommended-card {
+        margin-bottom: 30px; /* Ensure there is a bottom margin for spacing */
+    }
+
+    /* List of recommended movies */
+    .movie-recommended-card ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .movie-recommended-card li {
+        color: #cecefb;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        .movie-title {
+            font-size: 1.8rem;
+        }
+
+        .movie-poster {
+            max-width: 250px;
+        }
+
+        .movie-overview {
+            font-size: 1rem;
+        }
+
+        .review-card {
+            padding: 10px;
+        }
+
+        .movie-trailer-card, .movie-recommended-card {
+            margin-bottom: 20px; /* Adjust bottom margin for mobile */
+        }
+    }
+}
