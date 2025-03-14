@@ -1,0 +1,11 @@
+.search-container {
+  @apply relative flex items-center w-full;
+}
+
+.search-icon {
+  @apply absolute left-3 w-5 h-5;
+}
+
+.search-input {
+  @apply w-full bg-gray-800 text-white rounded-lg pl-10 pr-4 py-2 outline-none border border-gray-700 hover:border-purple-500 transition-colors;
+}
