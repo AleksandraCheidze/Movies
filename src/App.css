@@ -40,3 +40,42 @@
 .read-the-docs {
   color: #888;
 }
+
+.movie-card {
+    position: relative;
+}
+
+.movie-card .rating {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    @apply bg-black/70 p-2 rounded-lg flex items-center gap-1 z-10;
+}
+
+.movie-card .rating img {
+    @apply w-4 h-4;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main-logo {
+    height: 55px;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .main-logo {
+        height: 40px;
+    }
+}
+
+.banner-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
