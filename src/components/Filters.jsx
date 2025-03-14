@@ -4,7 +4,6 @@ const Filters = ({ filters, setFilters }) => {
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: 50 }, (_, i) => currentYear - i);
 
-
   const ratingRanges = [
     { value: "1-2", label: "1-2 ⭐" },
     { value: "2-3", label: "2-3 ⭐" },

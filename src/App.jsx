@@ -128,34 +128,25 @@ const App = () => {
               <div className="pattern" />
               <div className="wrapper">
                 <header>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      gap: "40px",
-                      marginTop: "-60px",
-                      marginBottom: "20px",
-                    }}
-                  >
-                    <Link
-                      to="/"
-                      onClick={() => window.location.reload()}
-                      style={{ marginLeft: "200px" }}
-                    >
+                  <div className="flex flex-col items-center justify-center mt-[-50px] mb-2">
+                    <div className="flex-shrink-0 mt-4">
+                      <Link to="/" onClick={() => window.location.reload()}>
+                        <img
+                          src="/cassandra-logo.png"
+                          alt="Cassandra Films"
+                          className="h-[160px] w-auto sm:h-[220px]"
+                        />
+                      </Link>
+                    </div>
+                    <div className="mt-[-80px]">
                       <img
-                        src="/cassandra-logo.png"
-                        alt="Cassandra Films"
-                        style={{ height: "170px", width: "auto" }}
+                        src="./hero.png"
+                        alt="Hero Banner"
+                        className="w-[30px] h-auto sm:w-[150px]"
                       />
-                    </Link>
-                    <img
-                      src="./hero.png"
-                      alt="Hero Banner"
-                      style={{ width: "300px", height: "auto" }}
-                    />
+                    </div>
                   </div>
-                  <h1 style={{ marginTop: "-20px" }}>
+                  <h1 className="text-3xl sm:text-5xl mt-2 px-4 text-center">
                     Find <span className="text-gradient">Movies</span>
                     <br />
                     You'll Enjoy Without the Hassle
@@ -164,22 +155,25 @@ const App = () => {
 
                 {trendingMovies.length > 0 && (
                   <section className="trending" style={{ marginTop: "-40px" }}>
-                    <h2>
+                    <h2 className="text-xl sm:text-2xl">
                       Trending <span className="text-gradient">Movies</span>
                     </h2>
-                    <ul>
-                      {trendingMovies.map((movie, index) => {
-                        console.log("Trending movie data:", movie);
-                        return (
-                          <li key={movie.$id}>
-                            <p>{index + 1}</p>
-                            <Link to={`/movie/${movie.movie_id}`}>
-                              <img src={movie.poster_url} alt={movie.title} />
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
+                    <div className="flex overflow-x-auto space-x-4 mt-4">
+                      {trendingMovies.map((movie) => (
+                        <div key={movie.$id} className="min-w-[120px]">
+                          <Link to={`/movie/${movie.movie_id}`}>
+                            <img
+                              src={movie.poster_url}
+                              alt={movie.title}
+                              className="w-full h-auto rounded-lg"
+                            />
+                          </Link>
+                          <p className="text-center text-sm text-white">
+                            {movie.title}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                   </section>
                 )}
 

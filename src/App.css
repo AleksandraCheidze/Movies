@@ -79,3 +79,39 @@
     gap: 15px;
     margin-bottom: 20px;
 }
+
+.header-content {
+  @apply flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-10 mt-2 sm:-mt-[60px] mb-2 sm:mb-5;
+}
+
+.logo-link {
+  @apply sm:ml-[200px];
+}
+
+.logo-image {
+  @apply h-[60px] sm:h-[170px] w-auto;
+}
+
+.hero-image {
+  @apply w-[30px] sm:w-[150px] h-auto;
+}
+
+.main-title {
+  @apply text-2xl sm:text-5xl mt-2 sm:-mt-5 px-4;
+}
+
+.trending {
+  padding: 1rem;
+}
+
+.trending h2 {
+  margin-bottom: 1rem;
+}
+
+.trending img {
+  transition: transform 0.3s;
+}
+
+.trending img:hover {
+  transform: scale(1.05);
+}
