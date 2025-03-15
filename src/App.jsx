@@ -97,7 +97,12 @@ const App = () => {
   const loadTrendingMovies = async () => {
     try {
       const movies = await getTrendingMovies();
-      setTrendingMovies(movies);
+      console.log("Trending Movies:", movies);
+      const uniqueMovies = movies.filter(
+        (movie, index, self) =>
+          index === self.findIndex((m) => m.movie_id === movie.movie_id)
+      );
+      setTrendingMovies(uniqueMovies);
     } catch (error) {
       console.error(`Error fetching trending movies: ${error}`);
     }
@@ -165,7 +170,7 @@ const App = () => {
                             <img
                               src={movie.poster_url}
                               alt={movie.title}
-                              className="w-full h-auto rounded-lg"
+                              className="w-[200px] h-auto rounded-lg"
                             />
                           </Link>
                           <p className="text-center text-sm text-white">
@@ -232,4 +237,3 @@ const App = () => {
 };
 
 export default App;
-
