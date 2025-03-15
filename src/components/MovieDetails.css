@@ -37,9 +37,8 @@
     .movie-poster {
         display: block;
         margin: 20px auto;
-        width: 100%;
         max-width: 400px;
-        border-radius: var(--border-radius);
+        height: auto;
     }
 
     .movie-info {
@@ -135,7 +134,6 @@
         margin-bottom: 30px;
     }
 
-    /* Рекомендованные карточки */
     .movie-recommended-card {
         width: 100%;
         background-color: var(--secondary-bg-color);
@@ -224,10 +222,21 @@
     @media (max-width: 768px) {
         .movie-title {
             font-size: 1.8rem;
+            margin-top: 10px;
+            text-align: center;
         }
 
         .movie-poster {
-            max-width: 250px;
+            width: 90%;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            margin: 10px auto;
+            display: block;
+        }
+
+        .movie-info {
+            padding: 10px;
         }
 
         .movie-overview {
@@ -238,31 +247,33 @@
             padding: 10px;
         }
 
-        .movie-trailer-card,
-        .movie-recommended-card {
-            margin-bottom: 20px;
+        .section-title {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .cast-grid {
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         }
 
         .movie-recommended-card {
-            flex: 0 0 160px;    
-            max-width: 160px;    
-            margin: 10px;      
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin: 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .movie-recommended-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
 
         .movie-recommended-card h3 {
             font-size: 0.9rem;
-        }
-
-        .movie-recommended-card .rating img {
-            width: 14px;
-        }
-
-        .movie-recommended-card .rating p {
-            font-size: 0.8rem;
-        }
-
-        .movie-recommended-card .content {
-            font-size: 0.7rem;
+            text-align: center;
         }
     }
 
@@ -333,14 +344,16 @@ header {
     text-align: center;
     margin: 2rem 0;
     position: relative;
+    padding-top: 100px;
 }
 
 header h1 {
-    font-size: 3.5rem;
-    text-align: center;
-    margin: 2rem auto;
+    font-size: 3rem;
+    margin: 1rem auto;
     max-width: 80%;
     line-height: 1.2;
+    text-align: center;
+    white-space: normal !important;
 }
 
 header img {
@@ -385,12 +398,49 @@ h1 {
     }
 
     .movie-details {
-        padding: 1rem;
+        padding: 10px;
+        margin: 10px;
     }
 
     header h1 {
         font-size: 2.5rem;
-        margin: 1.5rem auto;
+        margin: 1rem 0;
+    }
+
+    .movie-info {
+        padding: 10px;
+    }
+
+    .movie-overview {
+        font-size: 1rem;
+    }
+
+    .review-card {
+        padding: 10px;
+    }
+
+    .cast-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .movie-recommended-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-recommended-card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .movie-recommended-card h3 {
+        font-size: 0.9rem;
+        text-align: center;
     }
 }
 
