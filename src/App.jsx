@@ -151,7 +151,7 @@ const App = () => {
                       />
                     </div>
                   </div>
-                  <div  className="flex flex-col items-center justify-center mt-[-70px]">
+                  <div className="flex flex-col items-center justify-center mt-[-70px]">
                     <h1 className="text-3xl sm:text-5xl mt-2 px-4 text-center">
                       Find <span className="text-gradient">Movies</span>
                       <br />
@@ -161,11 +161,11 @@ const App = () => {
                 </header>
 
                 {trendingMovies.length > 0 && (
-                  <section className="trending" style={{ marginTop: "-40px" }}>
-                    <h2 className="text-xl sm:text-2xl">
+                  <section className="trending" style={{ marginTop: "-20px" }}>
+                    <h2 className="text-xl sm:text-2xl text-center">
                       Trending <span className="text-gradient">Movies</span>
                     </h2>
-                    <div className="flex overflow-x-auto space-x-4 mt-4">
+                    <div className="flex overflow-x-auto space-x-4 mt-4 justify-center">
                       {trendingMovies.map((movie) => (
                         <div key={movie.$id} className="min-w-[120px]">
                           <Link to={`/movie/${movie.movie_id}`}>
@@ -185,7 +185,7 @@ const App = () => {
                 )}
 
                 <div className="mt-16">
-                  <h2 className="mb-6">
+                  <h2 className="text-center mb-6">
                     All <span className="text-gradient">Movies</span>
                   </h2>
 

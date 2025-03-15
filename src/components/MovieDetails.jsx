@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import "./MovieDetails.css";
@@ -93,21 +92,27 @@ const MovieDetails = () => {
     <main>
       <div className="pattern" />
       <div className="wrapper">
-        <header>
-          <Link to="/" className="logo-link">
+        <header className="">
+          <Link to="/" className="logo-link mt-[-70px] -ml-5">
             <img
               src="/cassandra-logo.png"
               alt="Cassandra Films"
               className="details-logo"
             />
           </Link>
-          <h1 className="text-3xl text-center">More about {movie.title}</h1>
+          <div className="flex flex-col items-center justify-center mt-[-70px]">
+            <h1 className="text-3xl sm:text-5xl mt-2 px-4 text-center ">
+              More about {movie.title}
+            </h1>
+          </div>
         </header>
-        <img
-          className="movie-poster"
-          src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-          alt={movie.title}
-        />
+        <div className="mt-[-40px]">
+          <img
+            className="movie-poster mt-0"
+            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            alt={movie.title}
+          />
+        </div>
         <div className="movie-info">
           <p className="movie-overview">{movie.overview}</p>
         </div>
@@ -138,6 +143,7 @@ const MovieDetails = () => {
             <div className="cast-grid">
               {movie.credits.cast
                 .filter((person) => person.profile_path)
+                .slice(0, 14)
                 .map((person) => (
                   <div key={person.id} className="cast-member">
                     <img
