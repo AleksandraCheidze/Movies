@@ -133,17 +133,17 @@ const App = () => {
               <div className="pattern" />
               <div className="wrapper">
                 <header>
-                  <div className="flex flex-col items-center justify-center mt-[-50px] mb-2">
+                  <div className="flex flex-col items-center justify-center mt-[-170px] mb-2">
                     <div className="flex-shrink-0 mt-4">
                       <Link to="/" onClick={() => window.location.reload()}>
                         <img
                           src="/cassandra-logo.png"
                           alt="Cassandra Films"
-                          className="h-[160px] w-auto sm:h-[220px]"
+                          className="h-[150px] w-auto sm:h-[120px]"
                         />
                       </Link>
                     </div>
-                    <div className="mt-[-80px]">
+                    <div className="mt-[-90px]">
                       <img
                         src="./hero.png"
                         alt="Hero Banner"
@@ -151,11 +151,13 @@ const App = () => {
                       />
                     </div>
                   </div>
-                  <h1 className="text-3xl sm:text-5xl mt-2 px-4 text-center">
-                    Find <span className="text-gradient">Movies</span>
-                    <br />
-                    You'll Enjoy Without the Hassle
-                  </h1>
+                  <div  className="flex flex-col items-center justify-center mt-[-70px]">
+                    <h1 className="text-3xl sm:text-5xl mt-2 px-4 text-center">
+                      Find <span className="text-gradient">Movies</span>
+                      <br />
+                      You'll Enjoy Without the Hassle
+                    </h1>
+                  </div>
                 </header>
 
                 {trendingMovies.length > 0 && (
