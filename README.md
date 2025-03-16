@@ -1,6 +1,10 @@
 ## <img src="0660fc82-794a-4471-9217-3a0e34538ded-removebg-preview.png" alt="Logo" width="150"/>
 
- a web application that allows users to search, view trailers, and get information about movies.
+ a web application that allows users to search, view trailers, and get information about movies
+ 
+You can check out the live version of the project 👉 [<img src="faviconCassandra.png" alt="Logo" width="50" />](https://cassandra-movies.vercel.app/)
+
+
 
    📺 **Application Demo**
 
