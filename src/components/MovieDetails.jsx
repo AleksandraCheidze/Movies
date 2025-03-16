@@ -165,13 +165,16 @@ const MovieDetails = () => {
         {movie.videos?.results?.length > 0 && (
           <div className="movie-info movie-trailer-card">
             <h2 className="section-title">Trailer</h2>
-            <iframe
-              width="560"
-              height="315"
-              src={`https://www.youtube.com/embed/${movie.videos.results[0].key}`}
-              title="Movie Trailer"
-              allowFullScreen
-            ></iframe>
+            <div className="trailer-container">
+              <iframe
+                width="100%"
+                height="315"
+                src={`https://www.youtube.com/embed/${movie.videos.results[0].key}`}
+                title="Movie Trailer"
+                allowFullScreen
+                className="trailer-iframe"
+              ></iframe>
+            </div>
           </div>
         )}
 
