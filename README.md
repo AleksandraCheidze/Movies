@@ -2,7 +2,7 @@
 
  a web application that allows users to search, view trailers, and get information about movies
  
-You can check out the live version of the project 👉 [<img src="faviconCassandra.png" alt="Logo" width="50" />](https://cassandra-movies.vercel.app/)
+You can check out the live version of the project  🡪 [<img src="icons8-clapperboard-48.png" alt="Logo" width="50" />](https://cassandra-movies.vercel.app/)
 
 
 
