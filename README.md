@@ -1,81 +1,92 @@
-   # Movie App
+## <img src="0660fc82-794a-4471-9217-3a0e34538ded-removebg-preview.png" alt="Logo" width="150"/>
 
-   ## Description
-
-   Movie App is a web application that allows users to search, view, and get information about movies. The application uses The Movie Database (TMDb) API to fetch movie data, including information about popular films, their details, cast, and reviews.
+ a web application that allows users to search, view trailers, and get information about movies.
 
    📺 **Application Demo**
-
 
 ![Demo](CassandraMovies-ezgif.com-video-to-gif-converter.gif)
 
    ## Features
 
-   - Search for movies by title.
-   - View movie details, including description, rating, release date, and cast.
-   - Display popular movies on the homepage.
-   - Watch movie trailers.
-   - Read reviews for movies.
-   - Get movie recommendations based on viewed films.
+👉 Search for movies by title
 
-   ## Technologies
+👉 View movie details, including description, rating, release date, and cast
 
-   - **React**: A library for building user interfaces.
-   - **React Router**: For managing routing in the application.
-   - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
-   - **Appwrite**: Backend as a service for data management and authentication.
-   - **TMDb API**: API for fetching movie information.
+👉 Trending Movies Algorithm: Displays trending movies based on a dynamic algorithm
 
-   ## Installation
+👉 Modern UI/UX: A sleek and user-friendly interface designed for a great experience
 
-   1. Clone the repository:
+👉 Responsiveness: Fully responsive design that works seamlessly across devices
 
-      ```bash
-      git clone https://github.com/your_username/your_repository.git
-      ```
+👉 Display popular movies on the homepage
 
-   2. Navigate to the project directory:
+👉 Watch movie trailers
 
-      ```bash
-      cd your_repository
-      ```
+👉 Read reviews for movies
 
-   3. Install dependencies:
+👉 Get movie recommendations based on viewed films
 
-      ```bash
-      npm install
-      ```
+and many more, including code architecture and reusability
 
-   4. Create a `.env.local` file in the root of the project and add your environment variables:
+## Technologies
 
-      ```plaintext
-      VITE_TMDB_API_KEY=your_api_key
-      VITE_APPWRITE_PROJECT_ID=your_project_id
-      VITE_APPWRITE_DATABASE_ID=your_database_id
-      VITE_APPWRITE_COLLECTION_ID=your_collection_id
-      ```
+- ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) A library for building user interfaces.  
+- ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) For managing routing in the application.  
+- ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) A utility-first CSS framework for rapid UI development.  
+- ![Appwrite](https://img.shields.io/badge/Appwrite-F02E65?style=for-the-badge&logo=appwrite&logoColor=white) Backend as a service for data management and authentication.  
+- ![TMDb](https://img.shields.io/badge/TMDb-01B4E4?style=for-the-badge&logo=themoviedatabase&logoColor=white) API for fetching movie information.  
 
-   5. Run the application:
 
-      ```bash
-      npm run dev
-      ```
+   ## 🤸 Quick Start
+Follow these steps to set up the project locally on your machine.
 
-   ## Usage
+Prerequisites
 
-   - Open the application in your browser at `http://localhost:3000`.
-   - Use the search bar to find movies.
-   - Click on a movie to see its details, including the trailer and reviews.
+Make sure you have the following installed on your machine:
 
-   ## Screenshots
+Git
+Node.js
+npm (Node Package Manager)
+Cloning the Repository
 
-   ![Screenshot of the homepage](link_to_homepage_screenshot)
-   ![Screenshot of the movie details page](link_to_movie_details_screenshot)
+```bash
+git clone https://github.com/AleksandraCheidze/Movies.git
+ ```
+Navigate to the project directory:
 
-   ## License
+```bash
+cd Movies
+ ```
 
-   This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Install dependencies:
 
-   ## Contact
+```bash
+npm install
+```
 
-   If you have any questions or suggestions, feel free to reach out to me at: your_email@example.com.
+Create a `.env.local` file in the root of the project and add your environment variables:
+
+ ```plaintext
+ VITE_TMDB_API_KEY=your_api_key
+ VITE_APPWRITE_PROJECT_ID=your_project_id
+ VITE_APPWRITE_DATABASE_ID=your_database_id
+ VITE_APPWRITE_COLLECTION_ID=your_collection_id
+ ```
+
+Run the application:
+
+```bash
+npm run dev
+```
+
+## Usage
+
+Open http://localhost:5173 in your browser to view the project
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out to me at: a.cxeidze@gmail.com.
