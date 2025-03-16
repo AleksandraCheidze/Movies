@@ -4,6 +4,11 @@
 
    Movie App is a web application that allows users to search, view, and get information about movies. The application uses The Movie Database (TMDb) API to fetch movie data, including information about popular films, their details, cast, and reviews.
 
+   📺 **Application Demo**
+
+
+![Demo](CassandraMovies-ezgif.com-video-to-gif-converter.gif)
+
    ## Features
 
    - Search for movies by title.
